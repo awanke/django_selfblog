@@ -4,6 +4,7 @@ from os import path
 from platform import platform
 if 'centos' in platform():
     DEBUG = False
+    DEBUG = True
 else:
     DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -155,7 +156,7 @@ if DEBUG:
     MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware', )
     LOG_FILE = '/tmp/blog.log'
 else:
-    LOG_FILE = '/home/the5fire/virtualenvs/bloga/logs/all.log'
+    LOG_FILE = 'logs/all.log'
 
 LOGGING = {
     'version': 1,
